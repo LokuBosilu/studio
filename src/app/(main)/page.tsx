@@ -173,32 +173,44 @@ export default function Home() {
       
       {/* Meet the Artists Section */}
       <section id="artists" className="w-full bg-background py-16 md:py-24">
-        <div className="container mx-auto max-w-7xl px-4 md:px-6">
+        <div className="container mx-auto max-w-5xl px-4 md:px-6">
           <h2 className="mb-12 text-center font-headline text-3xl md:text-4xl">
             Meet Our Artists
           </h2>
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-            {featuredArtists.map((artist, index) => (
-              <div key={artist.name} className="flex flex-col items-center gap-6 sm:flex-row sm:items-start text-center sm:text-left">
-                {artist.image && (
-                   <div className="relative aspect-square w-32 h-32 md:w-40 md:h-40 flex-shrink-0 overflow-hidden rounded-full shadow-lg">
-                    <Image
-                      src={artist.image.imageUrl}
-                      alt={`Portrait of ${artist.name}`}
-                      fill
-                      className="object-cover"
-                      data-ai-hint={artist.image.imageHint}
-                      sizes="160px"
-                    />
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {featuredArtists.map((artist, index) => (
+                <CarouselItem key={index}>
+                  <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start text-center sm:text-left px-12">
+                     {artist.image && (
+                       <div className="relative aspect-square w-48 h-48 md:w-56 md:h-56 flex-shrink-0 overflow-hidden rounded-full shadow-lg">
+                        <Image
+                          src={artist.image.imageUrl}
+                          alt={`Portrait of ${artist.name}`}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={artist.image.imageHint}
+                          sizes="224px"
+                        />
+                      </div>
+                    )}
+                    <div className="mt-4 sm:mt-0">
+                      <h3 className="font-headline text-3xl font-semibold">{artist.name}</h3>
+                      <p className="mt-4 text-muted-foreground text-lg">{artist.bio}</p>
+                    </div>
                   </div>
-                )}
-                <div>
-                  <h3 className="font-headline text-2xl font-semibold">{artist.name}</h3>
-                  <p className="mt-2 text-muted-foreground">{artist.bio}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-[-1rem] md:left-[-2rem]" />
+            <CarouselNext className="right-[-1rem] md:right-[-2rem]" />
+          </Carousel>
         </div>
       </section>
 
@@ -221,5 +233,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
