@@ -52,7 +52,7 @@ const virtualExhibitionPreviewFlow = ai.defineFlow(
         {text: `Place the artwork from the image in a setting described as: ${input.environmentDescription}. The artwork should be realistically integrated into the scene, hanging on a wall.`},
       ],
       config: {
-        responseModalities: ['IMAGE'],
+        responseModalities: ['TEXT', 'IMAGE'],
       },
     });
 
