@@ -45,7 +45,7 @@ export function Header() {
           <Palette className="h-6 w-6 text-primary" />
           <span className="font-headline text-lg font-semibold">Laya Art Gallery</span>
         </Link>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 mr-4">
           <nav className="hidden items-center space-x-6 md:flex">
             {navLinks.map((link) => (
               <NavLink key={link.href} {...link} />
