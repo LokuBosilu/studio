@@ -200,7 +200,7 @@ export default function Home() {
                         />
                       </div>
                     )}
-                    <div className="absolute bottom-0 right-0 md:right-20 transform translate-y-1/4 md:translate-y-0 md:translate-x-1/4 w-[300px] md:w-[350px] bg-background backdrop-blur-sm p-6 rounded-lg shadow-xl border border-border">
+                    <div className="absolute bottom-0 right-0 md:right-20 transform translate-y-1/4 md:translate-y-0 md:translate-x-1/4 w-[300px] md:w-[350px] bg-card text-card-foreground p-6 rounded-lg shadow-xl border border-border">
                       <h3 className="font-headline text-3xl font-semibold text-primary">{artist.name}</h3>
                       <p className="mt-4 text-muted-foreground text-base">{artist.bio}</p>
                     </div>
