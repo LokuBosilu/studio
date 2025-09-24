@@ -59,6 +59,30 @@
       "description": "A person looking closely at a painting in a gallery.",
       "imageUrl": "https://images.unsplash.com/photo-1758186167176-f2cfa93efc2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnYWxsZXJ5JTIwdmlzaXRvcnxlbnwwfHx8fDE3NTg2ODUyMDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "gallery visitor"
+    },
+    {
+      "id": "artist-elena-petrova",
+      "description": "Portrait of Elena Petrova",
+      "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc1ODY0MDczOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "artist-marcus-reid",
+      "description": "Portrait of Marcus Reid",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTg1ODI4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "artist-sofia-flores",
+      "description": "Portrait of Sofia Flores",
+      "imageUrl": "https://images.unsplash.com/photo-1663626914511-2b76f594a309?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMGFydGlzdHxlbnwwfHx8fDE3NTg2MTU0OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman artist"
+    },
+    {
+      "id": "artist-chen-wei",
+      "description": "Portrait of Chen Wei",
+      "imageUrl": "https://images.unsplash.com/photo-1648332658855-cf21aec8a614?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYW4lMjBhcnRpc3R8ZW58MHx8fHwxNzU4NjU3NTYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man artist"
     }
   ]
 }

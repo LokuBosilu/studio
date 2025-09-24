@@ -20,6 +20,30 @@ import Autoplay from "embla-carousel-autoplay";
 export default function Home() {
   const aboutImage = PlaceHolderImages.find((p) => p.id === "about-image");
   const heroArtworks = artworks.slice(0, 3);
+  
+  const featuredArtists = [
+    {
+      name: "Elena Petrova",
+      bio: "Elena's work explores the intersection of memory and abstraction, using gold leaf to represent fleeting moments of clarity amidst the chaos of recollection. Her paintings are a testament to the beauty of the ephemeral.",
+      image: PlaceHolderImages.find((p) => p.id === 'artist-elena-petrova')
+    },
+    {
+      name: "Marcus Reid",
+      bio: "A master of watercolor, Marcus captures the tranquil yet powerful essence of the natural world. His landscapes are immersive experiences, inviting viewers to step into misty forests and stand before dramatic seascapes.",
+      image: PlaceHolderImages.find((p) => p.id === 'artist-marcus-reid')
+    },
+    {
+      name: "Sofia Flores",
+      bio: "Sofia is a surrealist storyteller, weaving together mythology, botany, and human anatomy. Her mixed-media works are rich with symbolism, creating intricate narratives that challenge our perception of reality.",
+      image: PlaceHolderImages.find((p) => p.id === 'artist-sofia-flores')
+    },
+    {
+      name: "Chen Wei",
+      bio: "Chen's canvases pulsate with the energy of the urban environment. From the vibrant chaos of neon-lit streets to the abstract beauty of digital data streams, his work is a bold reflection of contemporary life.",
+      image: PlaceHolderImages.find((p) => p.id === 'artist-chen-wei')
+    },
+  ]
+
 
   return (
     <div className="flex flex-col">
@@ -146,6 +170,37 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* Meet the Artists Section */}
+      <section id="artists" className="w-full bg-background py-16 md:py-24">
+        <div className="container mx-auto max-w-7xl px-4 md:px-6">
+          <h2 className="mb-12 text-center font-headline text-3xl md:text-4xl">
+            Meet Our Artists
+          </h2>
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+            {featuredArtists.map((artist, index) => (
+              <div key={artist.name} className="flex flex-col items-center gap-6 sm:flex-row sm:items-start text-center sm:text-left">
+                {artist.image && (
+                   <div className="relative aspect-square w-32 h-32 md:w-40 md:h-40 flex-shrink-0 overflow-hidden rounded-full shadow-lg">
+                    <Image
+                      src={artist.image.imageUrl}
+                      alt={`Portrait of ${artist.name}`}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={artist.image.imageHint}
+                      sizes="160px"
+                    />
+                  </div>
+                )}
+                <div>
+                  <h3 className="font-headline text-2xl font-semibold">{artist.name}</h3>
+                  <p className="mt-2 text-muted-foreground">{artist.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Artist Application CTA */}
       <section className="w-full bg-background py-16 md:py-24">
@@ -166,3 +221,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
