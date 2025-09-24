@@ -189,18 +189,18 @@ export default function Home() {
                 <CarouselItem key={index}>
                   <div className="relative flex justify-center items-center h-[500px]">
                      {artist.image && (
-                       <div className="relative w-[300px] h-[400px] md:w-[350px] md:h-[460px] flex-shrink-0 overflow-hidden rounded-lg shadow-2xl">
+                       <div className="relative w-[460px] h-[350px] md:w-[500px] md:h-[380px] flex-shrink-0 overflow-hidden rounded-lg shadow-2xl">
                         <Image
                           src={artist.image.imageUrl}
                           alt={`Portrait of ${artist.name}`}
                           fill
                           className="object-cover"
                           data-ai-hint={artist.image.imageHint}
-                          sizes="(max-width: 768px) 300px, 350px"
+                          sizes="(max-width: 768px) 460px, 500px"
                         />
                       </div>
                     )}
-                    <div className="absolute bottom-0 left-0 md:left-20 transform translate-y-1/4 md:translate-y-0 md:-translate-x-1/4 w-[300px] md:w-[350px] bg-card text-card-foreground p-6 rounded-lg shadow-xl border border-border">
+                    <div className="absolute bottom-0 left-0 md:left-auto md:right-0 transform translate-y-1/4 md:translate-y-0 md:translate-x-1/4 w-[300px] md:w-[350px] bg-card text-card-foreground p-6 rounded-lg shadow-xl border border-border">
                       <h3 className="font-headline text-3xl font-semibold text-primary">{artist.name}</h3>
                       <p className="mt-4 text-muted-foreground text-base">{artist.bio}</p>
                     </div>
