@@ -143,7 +143,7 @@ export default function Home() {
       <section id="about" className="w-full bg-secondary/30 py-16 md:py-24">
         <div className="container mx-auto max-w-7xl px-4 md:px-6">
           <div className="grid items-center gap-12 md:grid-cols-2">
-            <div className="order-2 md:order-1">
+            <div className="order-2 md:order-1 text-center">
               <h2 className="font-headline text-3xl md:text-4xl">
                 What Makes Us Special
               </h2>
