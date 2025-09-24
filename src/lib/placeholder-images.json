@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "artwork-1",
+      "description": "Abstract painting with blue and gold.",
+      "imageUrl": "https://images.unsplash.com/photo-1533208087231-c3618eab623c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhYnN0cmFjdCUyMHBhaW50aW5nfGVufDB8fHx8MTc1ODY4NDU3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract painting"
+    },
+    {
+      "id": "artwork-2",
+      "description": "Serene landscape of a misty forest.",
+      "imageUrl": "https://images.unsplash.com/photo-1511884642898-4c92249e20b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmb3Jlc3QlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU4NjEwMzE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "forest landscape"
+    },
+    {
+      "id": "artwork-3",
+      "description": "Close-up portrait of a woman.",
+      "imageUrl": "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc1ODY0MDczOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "artwork-4",
+      "description": "Vibrant city street at night.",
+      "imageUrl": "https://images.unsplash.com/photo-1504326008149-71dbc00aa3ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2l0eSUyMG5pZ2h0fGVufDB8fHx8MTc1ODU4MzY2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city night"
+    },
+    {
+      "id": "artwork-5",
+      "description": "Minimalist sculpture with geometric shapes.",
+      "imageUrl": "https://images.unsplash.com/photo-1758557839522-7d6150265d39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtaW5pbWFsaXN0JTIwc2N1bHB0dXJlfGVufDB8fHx8MTc1ODY4NTIwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "minimalist sculpture"
+    },
+    {
+      "id": "artwork-6",
+      "description": "A still life arrangement of fruit and flowers.",
+      "imageUrl": "https://images.unsplash.com/photo-1608415123476-aca7a5da0abe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzdGlsbCUyMGxpZmV8ZW58MHx8fHwxNzU4NjI4NTUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "still life"
+    },
+    {
+      "id": "artwork-7",
+      "description": "Impressionistic seascape at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1708721204963-d0c24a26b5e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdW5zZXQlMjBzZWFzY2FwZXxlbnwwfHx8fDE3NTg2ODUyMDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sunset seascape"
+    },
+    {
+      "id": "artwork-8",
+      "description": "Digital abstract art with flowing lines.",
+      "imageUrl": "https://images.unsplash.com/photo-1620121692029-d088224ddc74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaWdpdGFsJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzU4NTg4MTI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital abstract"
+    },
+    {
+      "id": "hero-image",
+      "description": "A beautiful, well-lit art gallery interior.",
+      "imageUrl": "https://images.unsplash.com/photo-1605429523419-d828acb941d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhcnQlMjBnYWxsZXJ5fGVufDB8fHx8MTc1ODY4NTIwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "art gallery"
+    },
+    {
+      "id": "about-image",
+      "description": "A person looking closely at a painting in a gallery.",
+      "imageUrl": "https://images.unsplash.com/photo-1758186167176-f2cfa93efc2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnYWxsZXJ5JTIwdmlzaXRvcnxlbnwwfHx8fDE3NTg2ODUyMDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gallery visitor"
+    }
+  ]
 }
