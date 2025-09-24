@@ -203,6 +203,11 @@ export default function Home() {
                     <div className="absolute bottom-0 left-0 md:left-auto md:right-0 transform translate-y-1/4 md:translate-y-0 md:translate-x-1/4 w-[300px] md:w-[350px] bg-card text-card-foreground p-6 rounded-lg shadow-xl border border-border">
                       <h3 className="font-headline text-3xl font-semibold text-primary">{artist.name}</h3>
                       <p className="mt-4 text-muted-foreground text-base">{artist.bio}</p>
+                      <Button asChild variant="link" className="mt-4 p-0 h-auto">
+                        <Link href="#">
+                          Read More <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
                     </div>
                   </div>
                 </CarouselItem>
