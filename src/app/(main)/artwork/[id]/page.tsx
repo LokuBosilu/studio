@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { VirtualExhibitionClient } from "@/components/VirtualExhibitionClient";
 import { ZoomIn } from "lucide-react";
 
 type ArtworkPageProps = {
@@ -92,19 +91,6 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
           </Button>
 
         </div>
-      </div>
-      
-      {/* Virtual Exhibition Section */}
-      <div className="mt-16 md:mt-24">
-        <Separator />
-        <div className="py-12">
-            <h2 className="text-center font-headline text-3xl">Virtual Exhibition Preview</h2>
-            <p className="text-center mt-2 text-muted-foreground max-w-2xl mx-auto">
-                Curious how this piece will look in a room? Select an environment and our AI will generate a preview.
-            </p>
-            <VirtualExhibitionClient artwork={artwork} />
-        </div>
-        <Separator />
       </div>
     </div>
   );

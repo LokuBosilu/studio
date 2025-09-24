@@ -1,8 +1,6 @@
 "use server";
 
 import { z } from "zod";
-import { generateVirtualExhibitionPreview } from "@/ai/flows/virtual-exhibition-preview";
-import type { VirtualExhibitionPreviewInput } from "@/ai/flows/virtual-exhibition-preview";
 
 const artistApplicationSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -34,15 +32,4 @@ export async function submitArtistApplication(prevState: any, formData: FormData
     errors: {},
     reset: true,
   };
-}
-
-
-export async function generateVirtualPreview(input: VirtualExhibitionPreviewInput): Promise<{ previewImage?: string, error?: string }> {
-  try {
-    const result = await generateVirtualExhibitionPreview(input);
-    return { previewImage: result.virtualExhibitionPreview };
-  } catch (error) {
-    console.error("Error generating virtual preview:", error);
-    return { error: "Failed to generate preview. Please try again later." };
-  }
 }
