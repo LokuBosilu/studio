@@ -108,13 +108,6 @@ export default function Home() {
               </Link>
             ))}
           </div>
-           <div className="mt-12 text-center">
-            <Button asChild size="lg" variant="outline">
-              <Link href="/#gallery-full">
-                Explore Full Gallery <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
 
