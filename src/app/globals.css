@@ -16,7 +16,7 @@ body {
     --popover-foreground: 20 14% 4%;
     --primary: 45 33% 63%;
     --primary-foreground: 20 14% 4%;
-    --secondary: 45 33% 90%;
+    --secondary: 45 80% 80%;
     --secondary-foreground: 20 14% 4%;
     --muted: 45 33% 95%;
     --muted-foreground: 20 14% 30%;
@@ -33,14 +33,6 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
