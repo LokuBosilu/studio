@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ZoomIn } from "lucide-react";
 
 type ArtworkPageProps = {
@@ -48,6 +48,8 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
               </div>
             </DialogTrigger>
             <DialogContent className="max-w-4xl p-0">
+               <DialogTitle className="sr-only">{artwork.title}</DialogTitle>
+               <DialogDescription className="sr-only">A larger view of the artwork: {artwork.title} by {artwork.artist}.</DialogDescription>
                <div className="relative aspect-[3/4] w-full">
                   <Image
                     src={artwork.image.imageUrl}
