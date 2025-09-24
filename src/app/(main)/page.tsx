@@ -120,7 +120,17 @@ export default function Home() {
 
       {/* What makes us Special Section */}
       <section id="about" className="w-full bg-secondary/30 py-16 md:py-24">
-        <div className="container mx-auto max-w-3xl px-4 md:px-6">
+        <div className="container mx-auto max-w-3xl px-4 md:px-6 relative">
+          <div className="absolute top-0 left-0 hidden md:block">
+            <Image 
+              src="https://picsum.photos/seed/peacock/150/150"
+              alt="Peacock feather"
+              width={150}
+              height={150}
+              className="opacity-50"
+              data-ai-hint="peacock feather"
+            />
+          </div>
           <div className="text-center">
             <h2 className="font-headline text-3xl md:text-4xl text-center">
               What Makes Us Special
@@ -216,9 +226,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
-
-    
