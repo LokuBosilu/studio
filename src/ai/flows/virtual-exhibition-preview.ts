@@ -38,23 +38,6 @@ export async function generateVirtualExhibitionPreview(
   return virtualExhibitionPreviewFlow(input);
 }
 
-const virtualExhibitionPreviewPrompt = ai.definePrompt({
-  name: 'virtualExhibitionPreviewPrompt',
-  input: {schema: VirtualExhibitionPreviewInputSchema},
-  output: {schema: VirtualExhibitionPreviewOutputSchema},
-  prompt: [
-    {
-      media: {url: '{{artworkDataUri}}'},
-    },
-    {
-      text: 'Generate an image of this artwork in a virtual exhibition environment described as follows: {{{environmentDescription}}}.',
-    },
-  ],
-  config: {
-    responseModalities: ['TEXT', 'IMAGE'],
-  },
-});
-
 const virtualExhibitionPreviewFlow = ai.defineFlow(
   {
     name: 'virtualExhibitionPreviewFlow',
@@ -66,13 +49,17 @@ const virtualExhibitionPreviewFlow = ai.defineFlow(
       model: 'googleai/gemini-2.5-flash-image-preview',
       prompt: [
         {media: {url: input.artworkDataUri}},
-        {text: `Generate an image of this artwork in a virtual exhibition environment described as follows: ${input.environmentDescription}.`},
+        {text: `Place the artwork from the image in a setting described as: ${input.environmentDescription}. The artwork should be realistically integrated into the scene, hanging on a wall.`},
       ],
       config: {
-        responseModalities: ['TEXT', 'IMAGE'],
+        responseModalities: ['IMAGE'],
       },
     });
 
-    return {virtualExhibitionPreview: media!.url!};
+    if (!media?.url) {
+      throw new Error('Image generation failed.');
+    }
+
+    return {virtualExhibitionPreview: media.url};
   }
 );
