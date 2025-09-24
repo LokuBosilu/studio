@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative w-full text-white">
+      <section className="relative h-[60vh] w-full text-white md:h-[80vh]">
         <Carousel
           opts={{
             align: "start",
@@ -36,7 +36,7 @@ export default function Home() {
               stopOnInteraction: false,
             }),
           ]}
-          className="w-full"
+          className="absolute inset-0 w-full h-full"
         >
           <CarouselContent>
             {heroArtworks.map((artwork, index) => (
@@ -50,30 +50,25 @@ export default function Home() {
                     priority={index === 0}
                     data-ai-hint={artwork.image.imageHint}
                   />
-                  <div className="absolute inset-0 bg-black/60" />
-                  <div className="relative z-10 flex h-full flex-col items-center justify-center text-center p-4">
-                    <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl">
-                      {artwork.title}
-                    </h1>
-                    <p className="mt-2 text-xl text-gray-200 md:text-2xl">
-                      By {artwork.artist}
-                    </p>
-                    <p className="mt-4 max-w-2xl text-lg text-gray-300 md:text-xl">
-                      {artwork.description.substring(0, 100)}...
-                    </p>
-                    <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
-                      <Link href={`/artwork/${artwork.id}`}>
-                        View Artwork <ArrowRight className="ml-2 h-5 w-5" />
-                      </Link>
-                    </Button>
-                  </div>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex" />
-          <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex" />
         </Carousel>
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center p-4">
+          <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl">
+            Experience Art, Redefined
+          </h1>
+          <p className="mt-4 max-w-2xl text-lg text-gray-300 md:text-xl">
+            Discover a curated collection of contemporary and classic artworks from artists around the globe.
+          </p>
+          <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
+            <Link href="/#gallery">
+              Explore Gallery <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
       </section>
 
 
