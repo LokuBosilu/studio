@@ -125,10 +125,10 @@ export default function Home() {
             <h2 className="font-headline text-3xl md:text-4xl text-center">
               What Makes Us Special
             </h2>
-            <p className="mt-4 text-foreground/80">
+            <p className="mt-4 text-foreground/80 text-sm">
               At Laya Art Gallery, we're not just a place to buy art; we're a destination for artistic discovery. We pride ourselves on our meticulous curation process, seeking out artists who bring a unique perspective and a masterful command of their craft. Our collection is a testament to the vibrant, ever-evolving world of contemporary art.
             </p>
-            <p className="mt-4 text-foreground/80">
+            <p className="mt-4 text-foreground/80 text-sm">
               We believe in building relationships—between the artist and the collector, the artwork and the viewer. We offer personalized advisory services and create a welcoming environment where both seasoned collectors and new art lovers can feel inspired and confident in their acquisitions.
             </p>
           </div>
