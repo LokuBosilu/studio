@@ -189,14 +189,14 @@ export default function Home() {
                 <CarouselItem key={index}>
                   <div className="relative flex justify-center items-center h-[500px]">
                      {artist.image && (
-                       <div className="relative w-[460px] h-[350px] md:w-[500px] md:h-[380px] flex-shrink-0 overflow-hidden rounded-lg shadow-2xl">
+                       <div className="relative w-[500px] h-[380px] md:w-[600px] md:h-[450px] flex-shrink-0 overflow-hidden rounded-lg shadow-2xl">
                         <Image
                           src={artist.image.imageUrl}
                           alt={`Portrait of ${artist.name}`}
                           fill
                           className="object-cover"
                           data-ai-hint={artist.image.imageHint}
-                          sizes="(max-width: 768px) 460px, 500px"
+                          sizes="(max-width: 768px) 500px, 600px"
                         />
                       </div>
                     )}
