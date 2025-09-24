@@ -45,27 +45,29 @@ export function Header() {
           <Palette className="h-6 w-6 text-primary" />
           <span className="font-headline text-lg font-semibold">Laya Art Gallery</span>
         </Link>
-        <nav className="hidden items-center space-x-6 md:flex">
-          {navLinks.map((link) => (
-            <NavLink key={link.href} {...link} />
-          ))}
-        </nav>
-        <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle navigation menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <nav className="flex flex-col items-start space-y-4 pt-8">
-                {navLinks.map((link) => (
-                  <NavLink key={`mobile-${link.href}`} {...link} isMobile />
-                ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
+        <div className="flex items-center gap-4">
+          <nav className="hidden items-center space-x-6 md:flex">
+            {navLinks.map((link) => (
+              <NavLink key={link.href} {...link} />
+            ))}
+          </nav>
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right">
+                <nav className="flex flex-col items-start space-y-4 pt-8">
+                  {navLinks.map((link) => (
+                    <NavLink key={`mobile-${link.href}`} {...link} isMobile />
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
