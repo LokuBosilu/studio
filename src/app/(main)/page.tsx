@@ -214,6 +214,25 @@ export default function Home() {
           </Button>
         </div>
       </section>
+
+      {/* Enquiry CTA */}
+      <section className="w-full bg-secondary/30 py-16 md:py-24">
+        <div className="container mx-auto flex max-w-3xl flex-col items-center text-center px-4 md:px-6">
+          <h2 className="font-headline text-3xl md:text-4xl">
+            Have an Enquiry?
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Whether you're a collector, an artist, or an art lover, we'd love to hear from you.
+          </p>
+          <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90">
+            <Link href="/#contact">
+              Reach Now <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+      </section>
     </div>
   );
 }
+
+    
