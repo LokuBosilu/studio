@@ -83,6 +83,18 @@
       "description": "Portrait of Chen Wei",
       "imageUrl": "https://images.unsplash.com/photo-1648332658855-cf21aec8a614?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYW4lMjBhcnRpc3R8ZW58MHx8fHwxNzU4NjU3NTYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man artist"
+    },
+    {
+      "id": "artist-leo-van-der-zee",
+      "description": "Portrait of Leo Van Der Zee",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW4lMjBwb3J0cmFpdCUyMHNjYW5kaW5hdmlhbnxlbnwwfHx8fDE3NTg3NzI4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "artist-aisha-khan",
+      "description": "Portrait of Aisha Khan",
+      "imageUrl": "https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21hbiUyMGFydGlzdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc1ODc3MjgwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
     }
   ]
 }

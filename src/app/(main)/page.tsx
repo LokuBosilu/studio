@@ -15,35 +15,14 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { featuredArtists } from "@/lib/artists";
+import { slugify } from "@/lib/utils";
 
 
 export default function Home() {
   const aboutImage = PlaceHolderImages.find((p) => p.id === "about-image");
   const heroArtworks = artworks.slice(0, 3);
   
-  const featuredArtists = [
-    {
-      name: "Elena Petrova",
-      bio: "Elena's work explores the intersection of memory and abstraction, using gold leaf to represent fleeting moments of clarity amidst the chaos of recollection. Her paintings are a testament to the beauty of the ephemeral.",
-      image: PlaceHolderImages.find((p) => p.id === 'artist-elena-petrova')
-    },
-    {
-      name: "Marcus Reid",
-      bio: "A master of watercolor, Marcus captures the tranquil yet powerful essence of the natural world. His landscapes are immersive experiences, inviting viewers to step into misty forests and stand before dramatic seascapes.",
-      image: PlaceHolderImages.find((p) => p.id === 'artist-marcus-reid')
-    },
-    {
-      name: "Sofia Flores",
-      bio: "Sofia is a surrealist storyteller, weaving together mythology, botany, and human anatomy. Her mixed-media works are rich with symbolism, creating intricate narratives that challenge our perception of reality.",
-      image: PlaceHolderImages.find((p) => p.id === 'artist-sofia-flores')
-    },
-    {
-      name: "Chen Wei",
-      bio: "Chen's canvases pulsate with the energy of the urban environment. From the vibrant chaos of neon-lit streets to the abstract beauty of digital data streams, his work is a bold reflection of contemporary life.",
-      image: PlaceHolderImages.find((p) => p.id === 'artist-chen-wei')
-    },
-  ]
-
 
   return (
     <div className="flex flex-col">
@@ -204,7 +183,7 @@ export default function Home() {
                       <h3 className="font-headline text-3xl font-semibold text-primary">{artist.name}</h3>
                       <p className="mt-4 text-muted-foreground text-base">{artist.bio}</p>
                       <Button asChild variant="link" className="mt-4 p-0 h-auto">
-                        <Link href="#">
+                        <Link href={`/artist/${slugify(artist.name)}`}>
                           Read More <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
