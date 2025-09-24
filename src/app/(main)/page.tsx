@@ -1,3 +1,5 @@
+
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { artworks } from "@/lib/artworks";
@@ -5,40 +7,75 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find((p) => p.id === "hero-image");
   const aboutImage = PlaceHolderImages.find((p) => p.id === "about-image");
+  const heroArtworks = artworks.slice(0, 3);
 
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[60vh] w-full text-white md:h-[80vh]">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            className="object-cover"
-            priority
-            data-ai-hint={heroImage.imageHint}
-          />
-        )}
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
-          <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl">
-            Experience Art, Redefined
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg text-gray-200 md:text-xl">
-            Discover a curated collection of contemporary and classic artworks from artists around the globe.
-          </p>
-          <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="#gallery">
-              Explore Gallery <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
+      <section className="relative w-full text-white">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 5000,
+              stopOnInteraction: false,
+            }),
+          ]}
+          className="w-full"
+        >
+          <CarouselContent>
+            {heroArtworks.map((artwork, index) => (
+              <CarouselItem key={index}>
+                <div className="relative h-[60vh] w-full md:h-[80vh]">
+                  <Image
+                    src={artwork.image.imageUrl}
+                    alt={artwork.title}
+                    fill
+                    className="object-cover"
+                    priority={index === 0}
+                    data-ai-hint={artwork.image.imageHint}
+                  />
+                  <div className="absolute inset-0 bg-black/60" />
+                  <div className="relative z-10 flex h-full flex-col items-center justify-center text-center p-4">
+                    <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl">
+                      {artwork.title}
+                    </h1>
+                    <p className="mt-2 text-xl text-gray-200 md:text-2xl">
+                      By {artwork.artist}
+                    </p>
+                    <p className="mt-4 max-w-2xl text-lg text-gray-300 md:text-xl">
+                      {artwork.description.substring(0, 100)}...
+                    </p>
+                    <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
+                      <Link href={`/artwork/${artwork.id}`}>
+                        View Artwork <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex" />
+          <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex" />
+        </Carousel>
       </section>
+
 
       {/* Gallery Preview Section */}
       <section id="gallery" className="w-full bg-background py-16 md:py-24">
@@ -72,6 +109,13 @@ export default function Home() {
                 </Card>
               </Link>
             ))}
+          </div>
+           <div className="mt-12 text-center">
+            <Button asChild size="lg" variant="outline">
+              <Link href="/#gallery-full">
+                Explore Full Gallery <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
