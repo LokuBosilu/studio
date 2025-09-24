@@ -139,19 +139,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Us Section */}
+      {/* What makes us Special Section */}
       <section id="about" className="w-full bg-secondary/30 py-16 md:py-24">
         <div className="container mx-auto max-w-7xl px-4 md:px-6">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div className="order-2 md:order-1">
               <h2 className="font-headline text-3xl md:text-4xl">
-                Our Story
+                What Makes Us Special
               </h2>
               <p className="mt-4 text-foreground/80">
-                Laya Art Gallery was founded with a passion for connecting exceptional artists with discerning collectors. Our mission is to create a vibrant space that celebrates creativity, fosters artistic dialogue, and makes art accessible to everyone. We believe that art has the power to inspire, provoke, and enrich our lives.
+                At Laya Art Gallery, we're not just a place to buy art; we're a destination for artistic discovery. We pride ourselves on our meticulous curation process, seeking out artists who bring a unique perspective and a masterful command of their craft. Our collection is a testament to the vibrant, ever-evolving world of contemporary art.
               </p>
               <p className="mt-4 text-foreground/80">
-                We curate a diverse collection of artworks, ranging from traditional paintings to cutting-edge digital creations. Each piece is carefully selected for its unique vision, technical skill, and emotional resonance.
+                We believe in building relationships—between the artist and the collector, the artwork and the viewer. We offer personalized advisory services and create a welcoming environment where both seasoned collectors and new art lovers can feel inspired and confident in their acquisitions.
               </p>
             </div>
             <div className="order-1 md:order-2">
@@ -189,7 +189,7 @@ export default function Home() {
                 <CarouselItem key={index}>
                   <div className="relative flex justify-center items-center h-[500px]">
                      {artist.image && (
-                       <div className="relative w-[500px] h-[380px] md:w-[600px] md:h-[450px] flex-shrink-0 overflow-hidden rounded-lg shadow-2xl">
+                       <div className="relative w-[600px] h-[450px] md:w-[700px] md:h-[525px] flex-shrink-0 overflow-hidden rounded-lg shadow-2xl">
                         <Image
                           src={artist.image.imageUrl}
                           alt={`Portrait of ${artist.name}`}
