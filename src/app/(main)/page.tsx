@@ -216,7 +216,7 @@ export default function Home() {
       </section>
 
       {/* Enquiry CTA */}
-      <section className="w-full bg-secondary/30 py-16 md:py-24">
+      <section className="w-full bg-muted py-12 md:py-16">
         <div className="container mx-auto flex max-w-3xl flex-col items-center text-center px-4 md:px-6">
           <h2 className="font-headline text-3xl md:text-4xl">
             Have an Enquiry?
