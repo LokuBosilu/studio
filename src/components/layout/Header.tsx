@@ -18,6 +18,7 @@ const navLinks = [
   { href: "/#gallery", label: "Gallery" },
   { href: "/#about", label: "About" },
   { href: "/apply", label: "For Artists" },
+  { href: "/enquiry", label: "Contact" },
 ];
 
 export function Header() {
@@ -28,7 +29,7 @@ export function Header() {
       href={href}
       className={cn(
         "text-sm font-medium transition-colors hover:text-primary",
-        (pathname === href && href !== "/") || (href.startsWith("/#") && pathname === "/")
+        pathname === href && !href.startsWith("/#")
           ? "text-primary"
           : "text-foreground/80",
         isMobile && "py-2 text-lg"
@@ -73,3 +74,5 @@ export function Header() {
     </header>
   );
 }
+
+    

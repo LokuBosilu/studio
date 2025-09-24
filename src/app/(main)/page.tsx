@@ -123,7 +123,7 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl px-4 md:px-6">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div className="order-2 md:order-1 text-center">
-              <h2 className="font-headline text-3xl md:text-4xl">
+              <h2 className="font-headline text-3xl md:text-4xl text-center">
                 What Makes Us Special
               </h2>
               <p className="mt-4 text-foreground/80">
@@ -222,7 +222,7 @@ export default function Home() {
             Have an Enquiry?
           </h2>
           <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90">
-            <Link href="/#contact">
+            <Link href="/enquiry">
               Reach Now <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
@@ -231,5 +231,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     

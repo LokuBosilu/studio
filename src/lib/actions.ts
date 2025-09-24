@@ -33,3 +33,36 @@ export async function submitArtistApplication(prevState: any, formData: FormData
     reset: true,
   };
 }
+
+
+const enquirySchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  email: z.string().email({ message: "Please enter a valid email." }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+});
+
+export async function submitEnquiry(prevState: any, formData: FormData) {
+  const validatedFields = enquirySchema.safeParse({
+    name: formData.get("name"),
+    email: formData.get("email"),
+    message: formData.get("message"),
+  });
+
+  if (!validatedFields.success) {
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+      message: "Validation failed.",
+    };
+  }
+
+  // In a real application, you would process this data (e.g., save to a database, send an email).
+  console.log("New enquiry:", validatedFields.data);
+
+  return {
+    message: "Thank you for your enquiry! We will be in touch shortly.",
+    errors: {},
+    reset: true,
+  };
+}
+
+    
