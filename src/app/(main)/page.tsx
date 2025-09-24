@@ -172,9 +172,9 @@ export default function Home() {
       </section>
       
       {/* Meet the Artists Section */}
-      <section id="artists" className="w-full bg-background py-16 md:py-24">
+      <section id="artists" className="w-full bg-background py-16 md:py-24 overflow-hidden">
         <div className="container mx-auto max-w-5xl px-4 md:px-6">
-          <h2 className="mb-12 text-center font-headline text-3xl md:text-4xl">
+          <h2 className="mb-16 text-center font-headline text-3xl md:text-4xl">
             Meet Our Artists
           </h2>
           <Carousel
@@ -187,29 +187,29 @@ export default function Home() {
             <CarouselContent>
               {featuredArtists.map((artist, index) => (
                 <CarouselItem key={index}>
-                  <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start text-center sm:text-left px-12">
+                  <div className="relative flex justify-center items-center h-[500px]">
                      {artist.image && (
-                       <div className="relative aspect-square w-48 h-48 md:w-56 md:h-56 flex-shrink-0 overflow-hidden rounded-full shadow-lg">
+                       <div className="relative w-[300px] h-[400px] md:w-[350px] md:h-[460px] flex-shrink-0 overflow-hidden rounded-lg shadow-2xl">
                         <Image
                           src={artist.image.imageUrl}
                           alt={`Portrait of ${artist.name}`}
                           fill
                           className="object-cover"
                           data-ai-hint={artist.image.imageHint}
-                          sizes="224px"
+                          sizes="(max-width: 768px) 300px, 350px"
                         />
                       </div>
                     )}
-                    <div className="mt-4 sm:mt-0">
-                      <h3 className="font-headline text-3xl font-semibold">{artist.name}</h3>
-                      <p className="mt-4 text-muted-foreground text-lg">{artist.bio}</p>
+                    <div className="absolute bottom-0 right-0 md:right-20 transform translate-y-1/4 md:translate-y-0 md:translate-x-1/4 w-[300px] md:w-[350px] bg-background/80 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-border">
+                      <h3 className="font-headline text-3xl font-semibold text-primary">{artist.name}</h3>
+                      <p className="mt-4 text-muted-foreground text-base">{artist.bio}</p>
                     </div>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-[-1rem] md:left-[-2rem]" />
-            <CarouselNext className="right-[-1rem] md:right-[-2rem]" />
+            <CarouselPrevious className="left-[-1rem] md:left-[-4rem]" />
+            <CarouselNext className="right-[-1rem] md:right-[-4rem]" />
           </Carousel>
         </div>
       </section>
