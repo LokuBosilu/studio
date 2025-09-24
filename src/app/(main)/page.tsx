@@ -83,12 +83,12 @@ export default function Home() {
               <Link href={`/artwork/${artwork.id}`} key={artwork.id} className="group">
                 <Card className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2">
                   <CardContent className="p-0">
-                    <div className="relative aspect-[3/4] w-full">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden">
                       <Image
                         src={artwork.image.imageUrl}
                         alt={artwork.title}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         data-ai-hint={artwork.image.imageHint}
                       />
